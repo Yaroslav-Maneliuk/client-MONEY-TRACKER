@@ -1,38 +1,93 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #4d455d;
+  color: #f5e9cf;
+}
+
+main {
+  max-width: 450px;
+  margin: 50px auto;
+}
+
+.red {
+  color: #e96479;
+}
+.green {
+  color: #7db9b6;
+}
+
+h1 {
   text-align: center;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input {
+  width: 100%;
+  background-color: transparent;
+  color: #f5e9cf;
+  border: 2px solid #7c7587;
+  padding: 2px 5px;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form input::placeholder,
+form input[type="datetime-local"] {
+  color: #afafaf;
+}
+
+.basic_information {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
+  margin-bottom: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+form button {
+  width: 100%;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transactions {
+  margin-top: 10px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid #7c7587;
+}
+
+.transaction:first-child {
+  border-top: 0;
+}
+
+.name,
+.price {
+  font-size: 1.2rem;
+}
+
+.description,
+.datetime {
+  margin-top: 3px;
+  font-size: 0.8rem;
+  color: #afafaf;
+}
+
+.right {
+  text-align: right;
 }
